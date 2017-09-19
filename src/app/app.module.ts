@@ -14,6 +14,8 @@ import { Operation } from '../template/template.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent, 
+    Operation]
 })
 export class AppModule { }

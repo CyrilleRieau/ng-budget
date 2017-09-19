@@ -1,13 +1,28 @@
-<label for="date">Date</label>
-<input type="date" id="date" [(ngModel)]='operation.date'>
-<label for="description">Description</label>
-<input type="text" id="description" [(ngModel)]='operation.description'>
-<label for="montant">Montant</label>
-<input type="number" id="montant" [(ngModel)]='operation.montant'>
-<label for="categorie">Catégorie</label>
-<input type="text" id="categorie" [(ngModel)]='operation.categorie'>
-<!--<label for="doggy">Ai-je un chien ?</label>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{titre}}</h1>
+    <label for="date">Date</label>
+    <input type="date" id="date" [(ngModel)]='operation.date'>
+    <label for="description">Description</label>
+    <input type="text" id="description" [(ngModel)]='operation.description'>
+    <label for="montant">Montant</label>
+    <input type="number" id="montant" [(ngModel)]='operation.montant'>
+    <label for="categorie">Catégorie</label>
+    <input type="text" id="categorie" [(ngModel)]='operation.categorie'>
+    <!--<label for="doggy">Ai-je un chien ?</label>
 <input type="checkbox" id="doggy" [(ngModel)]="dogShow">
 <label for="dogname" [hidden]="!dogShow">Nom du chien ?</label>
 <input type="text" id="dogname" [(ngModel)]='personne.nom_chien' [hidden]="!dogShow">-->
-<button (click)="afficher()">Notifier</button>
+    <button (click)="afficher()">Notifier</button>
+</body>
+
+</html>
