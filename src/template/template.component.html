@@ -1,0 +1,13 @@
+<label for="date">Date</label>
+<input type="date" id="date" [(ngModel)]='operation.date'>
+<label for="description">Description</label>
+<input type="text" id="description" [(ngModel)]='operation.description'>
+<label for="montant">Montant</label>
+<input type="number" id="montant" [(ngModel)]='operation.montant'>
+<label for="categorie">Catégorie</label>
+<input type="text" id="categorie" [(ngModel)]='operation.categorie'>
+<!--<label for="doggy">Ai-je un chien ?</label>
+<input type="checkbox" id="doggy" [(ngModel)]="dogShow">
+<label for="dogname" [hidden]="!dogShow">Nom du chien ?</label>
+<input type="text" id="dogname" [(ngModel)]='personne.nom_chien' [hidden]="!dogShow">-->
+<button (click)="afficher()">Notifier</button>
