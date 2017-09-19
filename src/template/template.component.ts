@@ -6,7 +6,7 @@ import {ClassOpe} from './interface';
     templateUrl:'./template.component.html'
 })
 export class Operation {
-    titre : "Cahier de Budgetisation";
+    titre = "Cahier de Budgetisation";
     operation : ClassOpe = {
     date: new Date, 
     description:'',
