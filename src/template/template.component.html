@@ -9,7 +9,15 @@
 </head>
 
 <body>
+
     <h1>{{titre}}</h1>
+    <ul>
+        <li *ngFor="let item of budget; index as clef">
+            {{clef}} Le {{item.date}} {{item.categorie}} : {{item.montant}} euros pour {{item.description}}
+            <button (click)="delete(clef)">Delete</button>
+        </li>
+    </ul>
+
     <label for="date">Date</label>
     <input type="date" id="date" [(ngModel)]='operation.date'>
     <label for="description">Description</label>
@@ -22,7 +30,17 @@
 <input type="checkbox" id="doggy" [(ngModel)]="dogShow">
 <label for="dogname" [hidden]="!dogShow">Nom du chien ?</label>
 <input type="text" id="dogname" [(ngModel)]='personne.nom_chien' [hidden]="!dogShow">-->
-    <button (click)="afficher()">Notifier</button>
+    <button (click)="add()">Notifier</button>
+
+    <ul>
+        <li *ngFor="let item of budget; index as clef">
+            {{clef}} Le {{item.date}} {{item.categorie}} : {{item.montant}} euros pour {{item.description}}
+            <button (click)="delete(clef)">Delete</button>
+        </li>
+    </ul>
+    <!--Rajouter des Select pour afficher les dépenses ou crédits, 
+des boutons pour crédit et débit avec des tableaux et des valeurs différentes, 
+et des graph avec des valeurs différentes en fonction des budgets -->
 </body>
 
 </html>
