@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Operation } from '../template/template.component';
+import { CompteService } from './shared/compte/compte.service';
+import {HttpClientModule} from '@angular/common/http';
+import { CompteAjaxService } from './shared/compte-ajax.service';
+
 
 @NgModule({
   declarations: [
@@ -11,9 +15,13 @@ import { Operation } from '../template/template.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CompteService,
+    CompteAjaxService
+  ],
   bootstrap: [
     AppComponent, 
     Operation]

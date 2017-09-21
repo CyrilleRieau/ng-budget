@@ -12,7 +12,7 @@
 
     <h1>{{titre}}</h1>
     <ul>
-        <li *ngFor="let item of budget; index as clef">
+        <li *ngFor="let item of operations; index as clef">
             {{clef}} Le {{item.date}} {{item.categorie}} : {{item.montant}} euros pour {{item.description}}
             <button (click)="delete(clef)">Delete</button>
         </li>
@@ -30,16 +30,25 @@
 <input type="checkbox" id="doggy" [(ngModel)]="dogShow">
 <label for="dogname" [hidden]="!dogShow">Nom du chien ?</label>
 <input type="text" id="dogname" [(ngModel)]='personne.nom_chien' [hidden]="!dogShow">-->
-    <button (click)="add()">Notifier</button>
+    <button (click)="addOperation()">Notifier</button>
+    <select [(ngModel)]="selectedStyle">
+        <option value="debit">Débit</option>
+        <option value="credit">Crédit</option>
+    </select>
 
+    <div *ngIf="selectedStyle==='debit'">
+        <button (click)="debtCount()">Débit</button>
+    </div>
+    <div *ngIf="selectedStyle==='credit'">
+        <button (click)="creditCount()">Crédit</button>
+    </div>
     <ul>
         <li *ngFor="let item of budget; index as clef">
             {{clef}} Le {{item.date}} {{item.categorie}} : {{item.montant}} euros pour {{item.description}}
-            <button (click)="delete(clef)">Delete</button>
+            <button (click)="deleteOperation(clef)">Delete</button>
         </li>
     </ul>
-    <!--Rajouter des Select pour afficher les dépenses ou crédits, 
-des boutons pour crédit et débit avec des tableaux et des valeurs différentes, 
+    <!--Modifier toutes les methodes de template.component.ts pour faire que les requêtes ajax fonctionnent.        
 et des graph avec des valeurs différentes en fonction des budgets -->
 </body>
 
